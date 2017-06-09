@@ -10,6 +10,10 @@ namespace Code128_CSharp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Starting");
+            var x = new Sandbox();
+            Console.WriteLine("Ending");
+            Console.ReadLine();
         }
     }
 }
