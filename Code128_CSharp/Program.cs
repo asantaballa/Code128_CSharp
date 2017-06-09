@@ -11,7 +11,9 @@ namespace Code128_CSharp
         static void Main(string[] args)
         {
             Console.WriteLine("Starting");
-            var x = new Sandbox();
+            var sandbox = new Sandbox();
+            Console.WriteLine("Creating Array");
+            sandbox.CreateArray();
             Console.WriteLine("Ending");
             Console.ReadLine();
         }
