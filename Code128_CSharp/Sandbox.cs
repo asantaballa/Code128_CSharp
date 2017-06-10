@@ -12,7 +12,8 @@ namespace Code128_CSharp
 
         public void CreateArray()
         {
-            var cvtarr = new Object[4, 128];
+            //var cvtarr = new Object[4, 128];
+            var cvtarr = new Object[5, 129];
 
             //Define the conversion array
 
@@ -384,7 +385,7 @@ namespace Code128_CSharp
             cvtarr[2, 92] = "";
             cvtarr[3, 92] = "%K";
             cvtarr[4, 92] = 0;
-            cvtarr[1, 93] = "\";
+            cvtarr[1, 93] = "\\";
             cvtarr[2, 93] = "";
             cvtarr[3, 93] = "%L";
             cvtarr[4, 93] = 0;
@@ -534,7 +535,7 @@ namespace Code128_CSharp
 
         Char chr(int chin)
         {
-            return new  Char(chin);
+            return  (char)chin;
         }
     }
 }
