@@ -7,13 +7,42 @@ using System.Threading.Tasks;
 
 namespace Code128_CSharp
 {
+    class C128Entry
+    {
+        public string f1;
+        public string f2;
+        public string f3;
+        public int f4;
+    }
+
     class Sandbox
     {
+        //var cvtarr = new Object[4, 128];
+        Object[,] cvtarr = new Object[5, 129];
+        C128Entry[] c128Array = new C128Entry[128];
 
         public void CreateArray()
         {
-            //var cvtarr = new Object[4, 128];
-            var cvtarr = new Object[5, 129];
+
+            LoadArray();
+            ConvertArray();
+        }
+
+        private void ConvertArray()
+        {
+            for (int i1 = 1; i1 <= 128; i1++)
+            {
+                var c128Entry = new C128Entry();
+                c128Entry.f1 = cvtarr[1, i1].ToString();
+                c128Entry.f2 = cvtarr[2, i1].ToString();
+                c128Entry.f3 = cvtarr[3, i1].ToString();
+                c128Entry.f4 = (int)cvtarr[4, i1];
+                c128Array[i1 - 1] = c128Entry;
+            }
+        }
+
+        public void LoadArray()
+        {
 
             //Define the conversion array
 
