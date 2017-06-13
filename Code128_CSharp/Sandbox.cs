@@ -41,6 +41,18 @@ namespace Code128_CSharp
                 c128Entry.f5 = Convert.ToString(cvtarr[5, i1]);
                 c128Array[i1 - 1] = c128Entry;
             }
+            for (int i1 = 0; i1 <= 105; i1++)
+            {
+                var c128Entry = c128Array[i1];
+                string str = ""
+                + c128Entry.f1
+                + '/' + c128Entry.f2
+                + '/' + c128Entry.f3
+                + '/' + c128Entry.f4
+                + '/' + c128Entry.f5
+                ;
+                Console.WriteLine(str);
+            }
         }
 
         public char GetObjAsChar(Object obj)
